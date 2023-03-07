@@ -1,0 +1,115 @@
+.hero {
+background: linear-gradient(130deg,
+    rgba(#000,.9) 0%,rgba(#000,.9) 60%,
+    transparent 40%),
+    url(/img/nat-7.webp);
+    background-size: 100%;
+    padding: 2rem;
+    width:100vw;
+    max-width:100%;
+    height: 90vh;
+    position: relative;
+    clip-path: polygon(100% 85%, 100% 0, 0 0, 0 85%, 53% 97%);
+    
+    @media screen and (max-width:484px){
+      background: linear-gradient(130deg,
+      rgba(#000,.9) 0%,rgba(#000,.9) 100%,
+      transparent 0),
+      url(/img/nat-7.webp);
+      background-size: 100%;
+    }
+
+      &::after {
+        content:"";
+        position: absolute;
+        background: linear-gradient(to right, #f26419, #333533);
+        bottom:-4rem;
+        left: 0;
+        height: 10rem;
+        width: 100%;
+        z-index: -29;
+      }
+
+     
+     
+    @include respond(tab-land) {
+      min-width:100%;
+    }
+
+    &__header {
+        margin: 3rem 5rem;
+        animation: heromovein 1s ease  1s  both;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-around;
+      gap:6rem;
+      width:50%;
+      margin-left: 4rem;
+      
+      @media screen and (max-width:484px){
+       margin: 10rem auto;
+       display: grid;
+       justify-items: center;
+    }
+
+    @include respond(phone-tab) {
+      margin-top: 20rem;
+    }
+    }
+
+    &__btn-container {
+      width:6rem;
+      height: 6rem;
+      background: rgba(#000, .9);
+      display: grid;
+      place-content: center;
+      border-radius: 50%;
+      border: 1px solid $color-gray;
+      padding: 3rem;
+      cursor: pointer;
+      align-self:center;
+      animation: herobtn 1s ease-in-out  infinite alternate both;
+    }
+
+    &__btn {
+      cursor: pointer;
+      display: inline-block;
+      background: none;
+      border-width: 0px 2px 2px 0px;
+      border-color: $color-primary;
+      width:3rem;
+      height:3rem;
+      transform: rotate(45deg);
+       margin-top: -1rem;
+    }
+
+    &__image-container {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap:5rem;
+       place-content: center;
+       max-width:50%;
+       animation: hero-img-movein 1s ease  1s both;
+    }
+
+    &__img-contain {
+        cursor: pointer;
+       width: 15rem;
+       animation: heroimage 2s ease-in-out  infinite alternate both;
+    //    filter: drop-shadow(0px 34px 15px rgba(#000, 0.96));
+       
+      //  &:nth-child(1) {
+        
+      //  }
+       &:nth-child(2) {
+        animation: heroimage 2s  cubic-bezier(.08,.91,.72,.37)  infinite alternate-reverse both;
+
+       }
+       &:nth-child(3) {
+        animation: heroimage 2s   infinite alternate-reverse both;
+        margin: 0 4rem;
+       }
+    }
+}

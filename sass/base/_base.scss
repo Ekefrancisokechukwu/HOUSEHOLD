@@ -1,0 +1,61 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@900&family=Kaushan+Script&family=Great+Vibes&display&family=Poppins:wght@300&display=swap');
+
+// family=Great+Vibes&display=swap
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 8px;
+  }
+  @include respond(tab-port) {
+    font-size: 6.9px;
+  }
+  @include respond(phone) {
+    font-size: 5.9px;
+  }
+  @include respond(phone-max) {
+    font-size: 4.9px;
+  }
+}
+
+body {
+  font-family: Poppins,  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+svg {
+  width:2.3rem;
+  height:2.3rem;
+}
+
+span {
+  font-size: $default-size;
+  font-variant: small-caps;
+}
+
+img {
+  width:100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  // object-position: 50rem;
+}
+
+ul {
+  list-style: none;
+}

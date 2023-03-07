@@ -1,0 +1,125 @@
+
+
+@keyframes form {
+  0% {
+    opacity: .3;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+}
+
+
+@keyframes secondform {
+  0% {
+    transform: scale(.2) skew(4deg, -30deg);
+  }
+  
+  100% {
+    transform:  translate(-50%, -50%) scale(1);
+  }
+}
+
+
+
+@keyframes heromovein {
+  0% {
+    opacity: 0;
+    transform: translate(-100rem);
+  }
+  80% {
+    opacity: .8;
+    transform:translateX(3rem) ;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes hero-img-movein {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+// hero images start
+@keyframes heroimage {
+  0% {
+    transform: translateY(6%) ;
+    // filter: drop-shadow(0px 45px 50px rgba(#daa759, 0.3));
+    filter: drop-shadow(0px 34px 15px rgba(#000, 0.96));
+
+  }
+
+
+  100% {
+    transform: translateY(-20%) ;
+    filter: drop-shadow(0px 45px 50px rgba(#daa759, 0.3));
+  }
+}
+
+// hero images end
+
+// top nav list start
+  @keyframes topnav {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+    // 80% {
+    //   transform:;
+    // }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+// top nav list end
+
+
+
+
+
+@keyframes herobtn {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    filter: drop-shadow( 2px 1px 5px rgba(#9f8812ba, 0.3));
+    transform: scale(1);
+  }
+}
+
+
+// SORT PRODUCTS ANIMATION START////
+
+@keyframes sort-MoveIn {
+  0% {
+    opacity: 0; 
+    transform: translateY(30rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+// SORT PRODUCTS ANIMATION END
