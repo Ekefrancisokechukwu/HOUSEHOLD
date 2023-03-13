@@ -18,13 +18,11 @@ productsTotal()
 const filterBtns = document.querySelectorAll(".category-item")
 
 window.addEventListener("DOMContentLoaded", () => {
-  displayProducts(products);
   displayCategoryBtn()
   GenderFilter();
-  
-
 })
 
+displayProducts(products);
 
 
 
@@ -34,7 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
  function displayProducts (items) {
   let display = items.map( function (item) {
     let {id,img,desc,karat,gender,colors,made,price} = item;
-    
+    // let search = cartBox.find((x) => x.id == id) || [];
     return `
     <article class="products__product--item">
     <figure class="products__product--img">

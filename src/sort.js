@@ -79,11 +79,14 @@ const searchHandler = () => {
     }
 
         let prod = products.filter((prodName) => {
-          if(prodName.name.includes(inputValues)) {
+          let prodEl = prodName.name; 
+          if(prodEl.includes(inputValues)) {
             return prodName;
           }else {
             // 
           }
+          // (prodEl.includes(inputValues))? prodName: message.classList.toggle('visible')
+        
         })
         if(inputValues) {
           displayProducts(prod)

@@ -1,0 +1,65 @@
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top:0;
+  bottom:0;
+  background: linear-gradient(to right bottom,
+  #fff, rgb(246, 233, 120));
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 4000;
+  transition:  all .3s;
+
+
+  &__circle {
+    width:15rem;
+    height: 15rem;
+    position: relative;
+
+    &::after {
+     position: absolute;
+     content: "";
+     height: 16rem;
+     width: 16rem;
+     top:50%;
+     left:50%;
+     transform: translate(-50%,-50%);
+     border: 4px solid #fff;
+     border-block-start-color: rgb(226, 169, 25);
+     border-radius: 50%;
+     animation: loader360 2s infinite ;
+    }
+
+  }
+  
+  &__name {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 4vw;
+    margin: 2rem 0;
+    letter-spacing: 5px;
+    padding-inline-start: 2rem;
+    background: url(/img/form.webp);
+    background-position: 600%;
+    background-size: 2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke: 2px #fce21e7e;
+     animation: landingName 3s linear  infinite ;
+  }
+}
+
+ .preloader.loaded  {
+  transition-delay: 234ms;
+  transform: translateY(100%);
+ }
+
+// padding-inline-start: 2rem;
+// -webkit-text-fill-color: transparent;
+// background-clip: text;
+// -webkit-background-clip: text;
+// -webkit-text-stroke: 2px #130f0551;

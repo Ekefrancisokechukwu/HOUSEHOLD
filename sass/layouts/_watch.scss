@@ -3,12 +3,12 @@
   width:95vw;
   margin: 3rem auto;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(13, 1fr);
   gap: 1.3rem;
 
 
    &__sorts {
-     grid-column: 1 / span 2;
+     grid-column: 1 / span 3;
    }
   &__sort-item {
     display: flex;
@@ -31,7 +31,7 @@
   
   &__product {
     display: grid;
-    grid-column: 3/-1;
+    grid-column: 4/-1;
     grid-template-columns: repeat(12, 1fr);
     gap:1.3rem;
     
